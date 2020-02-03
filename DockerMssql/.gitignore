@@ -1,0 +1,9 @@
+docker-data/
+.DS_Store
+*~
+*#
+.#*
+*.pyc
+.idea
+migrate/__pycache__
+docker-compose.yml

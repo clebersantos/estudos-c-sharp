@@ -1,0 +1,20 @@
+version: '3.0'
+
+services:
+  salic-mssql:
+    build: .
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: mssql-estudo
+    volumes: 
+      - docker-data:/var/opt/mssql # for mac
+      # - ./docker-data:/var/opt/mssql # for linux
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=estudo@123456
+      - MSSQL_PID=Developer
+volumes: # for mac
+  docker-data: 
+
+      
